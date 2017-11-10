@@ -1,0 +1,39 @@
+body
+    font-family: 'HelveticaNeueCyr'
+    font-weight: 300
+    font-variant: normal
+
+.page
+  width: 100%
+
+.wrapper
+  width: 100%
+  height: auto
+  margin: 0 auto
+  background-color: #ccc
+
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  flex-direction: column
+  align-items: flex-start
+
+.frame
+  width: 86.74963396778917%
+  margin: 0 auto
+  padding: 0 15px
+  display: flex
+
+
+// media
+@media screen and (min-width:1367px )
+  .frame
+    width: 1366px
+
+@include phone
+
+@include phone-tablet
+
+@include tablet
+
+@include old-screen
