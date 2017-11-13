@@ -1,0 +1,103 @@
+.nav
+    padding-top: 45px
+    padding-bottom: 45px
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+.menu
+    width: auto !important
+.block_nav_element
+    margin: 0 0
+    &:last-child
+        margin: 0 0 0 13px
+    &:last-of-type
+        a
+            padding-right: 0
+    &:first-child
+        margin: 0 13px 0 0
+    a
+        color: $main_color
+        text-transform: uppercase
+        font-size: $text_medium
+        text-decoration: none
+
+    .vertical
+        left: 0!important
+        right: 0!important
+        margin:  0 auto
+        li
+            padding: 10px 15px
+            &:hover
+                background: $back_color
+            a
+                padding: 0 0
+
+
+.no-js .top-bar
+  display: none
+
+@media screen and (min-width: 40em)
+  .no-js .top-bar
+    display: block
+
+
+  .no-js .title-bar
+    display: none
+
+@include old-screen
+    .nav
+        justify-content: center
+    .main_logo
+        flex-basis: 100%
+        margin: 0 0 25px 0
+        img
+            margin: 0 auto
+            display: block
+@include tablet
+    .nav
+        justify-content: center
+    .main_logo
+        flex-basis: 100%
+        margin: 0 0 25px 0
+        img
+            margin: 0 auto
+            display: block
+    .block_nav_element
+        margin: 0 0
+        &:last-child
+            margin: 0 0 0 0
+        &:first-child
+            margin: 0 0 0 0
+@include phone-tablet
+    .menu
+        justify-content: center
+    .nav
+        justify-content: center
+    .main_logo
+        flex-basis: 100%
+        margin: 0 0 25px 0
+        img
+            margin: 0 auto
+            display: block
+    .block_nav_element
+        &:last-child
+            margin: 0 0 0 0
+        &:first-child
+            margin: 0 0 0 0
+@include phone
+    .menu
+        width: 100% !important
+    .nav
+        justify-content: center
+    .main_logo
+        flex-basis: 100%
+        margin: 0 0 25px 0
+        img
+            margin: 0 auto
+            display: block
+    .block_nav_element
+        margin: 0 0
+        &:last-child
+            margin: 0 0 0 0
+        &:first-child
+            margin: 0 0 0 0

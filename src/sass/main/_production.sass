@@ -1,0 +1,100 @@
+.block_production_flex
+    flex-wrap: wrap
+    margin-top: 45px
+.block_production_tabs
+    flex-basis: 100%
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    background: $wh
+    border: none
+.tabs-title>a
+    color: $main_color
+    font-size: $text_medium
+    margin: 0 15px 0 35px
+    padding: 0 0 5px 0
+    transition: 0.9s
+.tabs-title>a:focus,.tabs-title>a[aria-selected=true]
+    background: $wh
+    color: $main_color
+    border-bottom: 1px solid $main_color
+
+.block_production_title
+    @include main_title
+
+.link_production
+    display: block
+    border-bottom: 5px solid $main_color
+    transition: 0.9s
+    color: $text_color
+    font-size: $text_medium
+    box-sizing: border-box
+    &:hover
+        border-bottom: 5px solid $green_color
+
+.tabs-panel
+    padding: 25px 0 55px 0
+    width: 100%
+
+.block_container_production_flex
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+
+.tabs-content
+    width: 100%
+    border: none
+    background: $wh
+
+.block_production_element
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    max-width: 260px
+    padding: 65px 0 21px 0
+    img
+        margin: 0 40px 0 0
+
+.tab_button
+    display: table
+    margin: 40px auto 0 auto
+    padding: 12px 35px
+    @include main_button
+
+
+@include phone
+    .block_container_production_flex
+        justify-content: center
+    .block_production_tabs
+        flex-wrap: wrap
+        li
+            width: 100%
+            h2
+                width: auto
+                text-align: center
+                margin: 0 0 10px 0
+    .tabs-title>a
+        display: table
+        margin: 10px auto
+        text-align: center
+    .block_production_element
+        padding: 25px 0 21px 0
+@include phone-tablet
+    .block_production_tabs
+        flex-wrap: wrap
+        li
+            width: 100%
+            h2
+                width: auto
+                text-align: center
+                margin: 0 0 10px 0
+    .tabs-title>a
+        display: table
+        margin: 10px auto
+        text-align: center
+    .block_production_element
+        padding: 25px 0 21px 0
+        max-width: 225px

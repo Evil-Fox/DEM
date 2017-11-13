@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "jquery": "^3.2.1",
-    "swiper": "^3.4.2"
+    "swiper": "^4.0.5"
   },
   "private": true,
   "devDependencies": {}

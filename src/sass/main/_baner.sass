@@ -1,0 +1,145 @@
+.block_baner_flex
+    justify-content: space-between
+    align-items: flex-start
+
+.swiper-container
+    width: 63.76068376068376%
+    height: auto
+    padding: 0
+    margin: 0
+
+.swiper-slide
+    text-align: center
+    background: #fff
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+    img
+        width: 100%
+        max-width: 100%
+
+.block_stock_flex
+    width: 30.5982905982906%
+    display: flex
+    flex-direction: column
+.block_stock_element
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding: 0 35px 0 15px
+    height: auto
+    max-height: 200px
+    box-shadow: 3px 4px 3px -3px #ccc
+    &:first-child
+        margin: 0 0 15px 0
+    &:last-child
+        margin: 15px 0 0 0
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        @include sprite($percent)
+
+.block_stock_container
+    padding: 40px 0 35px 0
+    box-sizing: border-box
+    h2
+        color: $text_color
+        font-size: $text_medium
+        text-transform: uppercase
+        margin: 0 0 9px 0
+    p
+        color: $text_color
+        font-size: $text_min
+        margin: 0 0 21px 0
+    a
+        padding: 12px 35px
+        @include main_button
+.stock_product_img
+    max-width: 100px
+    width: auto
+    height: auto
+    max-height: 100px
+
+@include phone
+    .block_baner_flex
+        flex-wrap: wrap
+        flex-direction: column
+    .swiper-container
+        width: 100%
+        margin: 35px 0
+    .block_stock_flex
+        width: 100%
+    .block_stock_element
+        flex-direction: column
+        height: auto
+        max-height: inherit
+        padding: 25px 0 0 0
+        &:first-child
+            margin: 0 0 0 0
+        &:last-child
+            margin: 0 0 0 0
+    .block_stock_container
+        order: 2
+    .stock_product_img
+        order: 1
+@include phone-tablet
+    .block_baner_flex
+        flex-wrap: wrap
+        flex-direction: column
+    .swiper-container
+        width: 100%
+        margin: 35px 0
+    .block_stock_flex
+        width: 100%
+        flex-direction: row
+        justify-content: space-between
+    .block_stock_element
+        width: 50%
+        flex-basis: 50%
+        flex-direction: column
+        height: auto
+        max-height: inherit
+        padding: 25px 0 0 0
+        &:first-child
+            margin: 0 0 0 0
+        &:last-child
+            margin: 0 0 0 0
+    .block_stock_container
+        order: 2
+    .stock_product_img
+        order: 1
+@include tablet
+    .block_baner_flex
+        flex-wrap: wrap
+        flex-direction: column
+    .swiper-container
+        width: 100%
+        margin: 35px 0
+    .block_stock_flex
+        width: 100%
+        flex-direction: row
+        justify-content: space-between
+    .block_stock_element
+        width: 50%
+        flex-basis: 50%
+        flex-direction: column
+        height: auto
+        max-height: inherit
+        padding: 25px 0 0 0
+        &:first-child
+            margin: 0 0 0 0
+        &:last-child
+            margin: 0 0 0 0
+    .block_stock_container
+        order: 2
+    .stock_product_img
+        order: 1

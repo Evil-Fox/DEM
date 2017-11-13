@@ -6,3 +6,23 @@ $back_color  :  #f5f5f5
 $wh          :  #ffffff
 
 $text_min    : 0.75em
+// 12px
+$text_medium : 0.875em
+// 14px
+$text_title  : 1.125em
+// 18px
+$text_big    : 1.5em
+// 24px
+
+@mixin main_button
+    transition: 0.8s
+    background: $main_color
+    color: $wh
+    &:hover
+        background: $green_color
+        color: $wh
+
+@mixin main_title
+    font-size: $text_big
+    color: $text_color
+    text-transform: uppercase

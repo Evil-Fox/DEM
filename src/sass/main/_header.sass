@@ -4,12 +4,12 @@
 
 .header_flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
     flex-direction: row
 
 .block_call_flex
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     align-items: center
     width: 29.19831223628692%
 
@@ -27,7 +27,7 @@
         margin: 0 0 14px 0
 
 .block_info_list
-    margin: 26px 0 0 0
+    display: flex
 
 .block_info_element
     margin: 0 11px
@@ -61,6 +61,7 @@
     padding-right: 20px
     &:hover
         background: rgba(255,34,25,0.89)
+        color: $wh
     &::before
         content: ''
         position: absolute
@@ -74,6 +75,7 @@
     padding-right: 34px
     &:hover
         background: rgba(0,48,157,0.7)
+        color: $wh
     &::before
         content: ''
         position: absolute
@@ -98,6 +100,8 @@
         margin: 15px 0 15px 0
         width: 100%
         text-align: center
+        justify-content: center
+        align-items: center
 
     .block_info_element
         &:first-child
@@ -143,6 +147,52 @@
         margin: 15px 0 15px 0
         width: 100%
         text-align: center
+        justify-content: center
+        align-items: center
+
+    .block_info_element
+        &:first-child
+            margin: 0 0 0 0
+        &:last-child
+            margin: 0 0 0 0
+
+    .block_header_button
+        width: 100%
+        justify-content: center
+
+    .header_button
+        display: block
+        padding-top: 10px
+        padding-bottom: 10px
+
+    .header_button_phone
+        &::before
+            left: 21px
+            top: 7px
+
+    .header_button_basket
+        &::before
+            left: 37px
+            top: 7px
+
+@include tablet
+    .header_flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-direction: column
+
+    .block_call_flex
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100%
+
+    .block_info_list
+        margin: 15px 0 15px 0
+        width: 100%
+        text-align: center
+        justify-content: center
+        align-items: center
 
     .block_info_element
         &:first-child

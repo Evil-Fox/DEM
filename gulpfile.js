@@ -41,7 +41,10 @@ gulp.task('css-libs',['sass'], function(){
 /*Таск для склейки библиотек JS */
 gulp.task('script-libs',function(){
   return gulp.src([
-    '',
+    'src/libs/jquery/dist/jquery.js',
+    'src/libs/foundation-sites/dist/js/foundation.js',
+    'src/libs/swiper/dist/js/swiper.js',
+
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
