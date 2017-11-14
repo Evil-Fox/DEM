@@ -1,19 +1,18 @@
-.header
+.wrapper_header
     background: $back_color
     height: auto
-
-.header_flex
+.header
     justify-content: space-between
     align-items: center
     flex-direction: row
 
-.block_call_flex
+
+.block_bell
     display: flex
     justify-content: space-between
     align-items: center
     width: 29.19831223628692%
-
-.block_call_element
+.bell_element
     display: flex
     flex-direction: column
     width: auto
@@ -26,10 +25,10 @@
         color: $red_color
         margin: 0 0 14px 0
 
-.block_info_list
-    display: flex
 
-.block_info_element
+.block_submenu
+    display: flex
+.submenu_element
     margin: 0 11px
     a
         font-size: $text_min
@@ -42,7 +41,6 @@
     display: flex
     justify-content: flex-end
     align-items: center
-
 .header_button
     display: block
     padding-top: 25px
@@ -54,11 +52,11 @@
     font-size: $text_min
     transition: 0.5s
     position: relative
-
 .header_button_phone
     background: $red_color
     padding-left: 49px
     padding-right: 20px
+    cursor: pointer
     &:hover
         background: rgba(255,34,25,0.89)
         color: $wh
@@ -68,7 +66,6 @@
         left: 21px
         top: 23px
         @include sprite($phone)
-
 .header_button_basket
     background: $main_color
     padding-left: 66px
@@ -85,25 +82,25 @@
 
 
 @include phone
-    .header_flex
+    .header
         justify-content: space-between
         align-items: flex-start
         flex-direction: column
 
-    .block_call_flex
+    .block_bell
         display: flex
         justify-content: space-around
         align-items: center
         width: 100%
 
-    .block_info_list
+    .block_submenu
         margin: 15px 0 15px 0
         width: 100%
         text-align: center
         justify-content: center
         align-items: center
 
-    .block_info_element
+    .submenu_element
         &:first-child
             margin: 0 0 0 0
         &:last-child
@@ -132,25 +129,25 @@
             top: 7px
 
 @include phone-tablet
-    .header_flex
+    .header
         justify-content: space-between
         align-items: flex-start
         flex-direction: column
 
-    .block_call_flex
+    .block_bell
         display: flex
         justify-content: space-around
         align-items: center
         width: 100%
 
-    .block_info_list
+    .block_submenu
         margin: 15px 0 15px 0
         width: 100%
         text-align: center
         justify-content: center
         align-items: center
 
-    .block_info_element
+    .submenu_element
         &:first-child
             margin: 0 0 0 0
         &:last-child
@@ -176,25 +173,25 @@
             top: 7px
 
 @include tablet
-    .header_flex
+    .header
         justify-content: space-between
         align-items: flex-start
         flex-direction: column
 
-    .block_call_flex
+    .block_bell
         display: flex
         justify-content: space-around
         align-items: center
         width: 100%
 
-    .block_info_list
+    .block_submenu
         margin: 15px 0 15px 0
         width: 100%
         text-align: center
         justify-content: center
         align-items: center
 
-    .block_info_element
+    .submenu_element
         &:first-child
             margin: 0 0 0 0
         &:last-child

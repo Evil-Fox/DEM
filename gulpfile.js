@@ -15,16 +15,23 @@ var gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps'),
     coffee      = require('gulp-coffee'),
     jshint      = require('gulp-jshint'),
-    babel       = require('gulp-babel');
+    babel       = require('gulp-babel'),
+    notify      = require('gulp-notify');
 
 /*Таск запускает sass и минифицует css так же browserSync следит за изминениями */
 gulp.task('sass', function(){
-  return gulp.src('src/sass/**/*.+(scss|sass)')
+  return gulp.src(['src/sass/**/*.+(scss|sass)'])
   .pipe(sourcemaps.init())
+  .pipe( sass().on( 'error', notify.onError(
+     {
+       message: "<%= error.message %>",
+       title  : "ЧТООО???"
+   } ) ) )
   .pipe(sass({outputStyle: 'expanded'}))
   .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
   .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest('src/css'))
+  // .pipe(notify({ message: 'This is хорошо!' }))
   .pipe(browserSync.reload({stream: true}));
 });
 /*Таск запускает sass и минифицует css так же browserSync следит за изминениями */
@@ -42,9 +49,9 @@ gulp.task('css-libs',['sass'], function(){
 gulp.task('script-libs',function(){
   return gulp.src([
     'src/libs/jquery/dist/jquery.js',
-    'src/libs/foundation-sites/dist/js/foundation.js',
     'src/libs/swiper/dist/js/swiper.js',
-
+    'src/libs/foundation-sites/dist/js/foundation.js',
+    'src/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
@@ -134,7 +141,7 @@ gulp.task('clean',function(){
 
 gulp.task('start', ['browser-sync', 'sprite', 'clean', 'img', 'css-libs', 'script-libs', 'script','build'], function(){
   gulp.watch('src/sass/**/*.+(scss|sass)',['sass']);
-  gulp.watch('src/css/**/*.css',['sass']);
+  gulp.watch('src/css/**/*.css'); // убрал ['sass'] как сверху!!!
 
   gulp.watch('src/js/coffee/*.coffee',['coffee']);
   gulp.watch('src/js/common/*.js',['script']);

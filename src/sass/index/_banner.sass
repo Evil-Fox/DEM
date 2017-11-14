@@ -1,14 +1,14 @@
-.block_baner_flex
+.block_banner
     justify-content: space-between
     align-items: flex-start
 
-.swiper-container
+.container-banner
     width: 63.76068376068376%
     height: auto
     padding: 0
     margin: 0
 
-.swiper-slide
+.slide-banner
     text-align: center
     background: #fff
     display: flex
@@ -24,11 +24,29 @@
         width: 100%
         max-width: 100%
 
-.block_stock_flex
+.pagination-banner
+    text-align: right
+    padding-right: 25px
+    bottom: 20px !important
+.pagination-banner
+    .swiper-pagination-bullet
+        margin: 0 7px !important
+.pagination-banner
+    .swiper-pagination-bullet
+        background: $wh
+        opacity: 1
+        width: 16px
+        height: 16px
+.pagination-banner
+    .swiper-pagination-bullet-active
+        background: $main_color
+
+.block_stock
     width: 30.5982905982906%
     display: flex
     flex-direction: column
-.block_stock_element
+
+.stock_element
     display: flex
     justify-content: space-between
     align-items: center
@@ -48,7 +66,7 @@
         right: 0
         @include sprite($percent)
 
-.block_stock_container
+.stock_container
     padding: 40px 0 35px 0
     box-sizing: border-box
     h2
@@ -63,6 +81,7 @@
     a
         padding: 12px 35px
         @include main_button
+
 .stock_product_img
     max-width: 100px
     width: auto
@@ -70,39 +89,40 @@
     max-height: 100px
 
 @include phone
-    .block_baner_flex
+    .block_banner
         flex-wrap: wrap
         flex-direction: column
-    .swiper-container
+    .container-banner
         width: 100%
         margin: 35px 0
-    .block_stock_flex
+    .block_stock
         width: 100%
-    .block_stock_element
+    .stock_element
         flex-direction: column
         height: auto
         max-height: inherit
         padding: 25px 0 0 0
         &:first-child
-            margin: 0 0 0 0
+            margin: 0 0 10px 0
         &:last-child
-            margin: 0 0 0 0
-    .block_stock_container
+            margin: 0 0 10px 0
+    .stock_container
         order: 2
     .stock_product_img
         order: 1
+
 @include phone-tablet
-    .block_baner_flex
+    .block_banner
         flex-wrap: wrap
         flex-direction: column
-    .swiper-container
+    .container-banner
         width: 100%
         margin: 35px 0
-    .block_stock_flex
+    .block_stock
         width: 100%
         flex-direction: row
         justify-content: space-between
-    .block_stock_element
+    .stock_element
         width: 50%
         flex-basis: 50%
         flex-direction: column
@@ -113,22 +133,23 @@
             margin: 0 0 0 0
         &:last-child
             margin: 0 0 0 0
-    .block_stock_container
+    .stock_container
         order: 2
     .stock_product_img
         order: 1
+
 @include tablet
-    .block_baner_flex
+    .block_banner
         flex-wrap: wrap
         flex-direction: column
-    .swiper-container
+    .container-banner
         width: 100%
         margin: 35px 0
-    .block_stock_flex
+    .block_stock
         width: 100%
         flex-direction: row
         justify-content: space-between
-    .block_stock_element
+    .stock_element
         width: 50%
         flex-basis: 50%
         flex-direction: column
@@ -139,7 +160,7 @@
             margin: 0 0 0 0
         &:last-child
             margin: 0 0 0 0
-    .block_stock_container
+    .stock_container
         order: 2
     .stock_product_img
         order: 1

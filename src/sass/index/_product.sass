@@ -1,7 +1,8 @@
-.block_production_flex
+.block_product
     flex-wrap: wrap
     margin-top: 45px
-.block_production_tabs
+
+.block_product_tabs
     flex-basis: 100%
     width: 100%
     display: flex
@@ -9,6 +10,7 @@
     align-items: flex-end
     background: $wh
     border: none
+
 .tabs-title>a
     color: $main_color
     font-size: $text_medium
@@ -20,10 +22,10 @@
     color: $main_color
     border-bottom: 1px solid $main_color
 
-.block_production_title
+.product_title
     @include main_title
 
-.link_production
+.link_product
     display: block
     border-bottom: 5px solid $main_color
     transition: 0.9s
@@ -37,7 +39,7 @@
     padding: 25px 0 55px 0
     width: 100%
 
-.block_container_production_flex
+.block_container_product
     display: flex
     justify-content: space-between
     align-items: flex-start
@@ -48,7 +50,7 @@
     border: none
     background: $wh
 
-.block_production_element
+.product_element
     display: flex
     justify-content: space-between
     align-items: center
@@ -66,9 +68,9 @@
 
 
 @include phone
-    .block_container_production_flex
+    .block_container_product
         justify-content: center
-    .block_production_tabs
+    .block_product_tabs
         flex-wrap: wrap
         li
             width: 100%
@@ -80,10 +82,10 @@
         display: table
         margin: 10px auto
         text-align: center
-    .block_production_element
+    .product_element
         padding: 25px 0 21px 0
 @include phone-tablet
-    .block_production_tabs
+    .block_product_tabs
         flex-wrap: wrap
         li
             width: 100%
@@ -95,6 +97,6 @@
         display: table
         margin: 10px auto
         text-align: center
-    .block_production_element
+    .product_element
         padding: 25px 0 21px 0
         max-width: 225px

@@ -17,7 +17,8 @@
   ],
   "dependencies": {
     "jquery": "^3.2.1",
-    "swiper": "^4.0.5"
+    "swiper": "^4.0.5",
+    "jquery.maskedinput": "^1.4.1"
   },
   "private": true,
   "devDependencies": {}

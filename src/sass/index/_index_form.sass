@@ -1,0 +1,119 @@
+.wrapper_form
+    background: url('../img/back_form.jpg') no-repeat
+    background-size: cover
+    padding: 113px 0 85px 0
+    margin: 90px 0 0 0
+
+.block_form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    h2
+        font-size: 30px
+        color: $wh
+        text-align: center
+        font-weight: bold
+        text-transform: uppercase
+        margin: 0 0 30px 0
+        line-height: 38px
+    form
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        width: 63.76068376068376%
+        input[type=text]
+            width: 358px
+            max-width: 100%
+            height: 50px
+            padding: 0 0 0 20px
+            box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+        input[type=submit]
+            width: 358px
+            height: 50px
+            border: none
+            background: #EE2017
+            color: #c7c7c7
+            text-transform: uppercase
+            cursor: pointer
+            display: table
+            margin: 21px auto 0 auto
+            transition: 0.9s
+            &:hover
+                box-shadow: 0px 2px 5px 1px #000
+                transform: scale(1.1)
+
+@include phone
+    .wrapper_form
+        padding: 80px 0 50px 0
+    .block_form
+        h2
+            font-size: 15px
+            line-height: 22px
+        form
+            width: 100%
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            input[type=text]
+                width: 100%
+                height: 35px
+            input[type=submit]
+                width: 100%
+                height: 35px
+
+@include phone-tablet
+    .wrapper_form
+        padding: 80px 0 50px 0
+    .block_form
+        h2
+            font-size: 15px
+            line-height: 22px
+        form
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            input[type=text]
+                width: 48%
+                height: 35px
+            input[type=submit]
+                width: 100%
+                height: 35px
+
+@include tablet
+    .wrapper_form
+        padding: 80px 0 50px 0
+    .block_form
+        h2
+            font-size: 15px
+            line-height: 22px
+        form
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            input[type=text]
+                width: 48%
+                height: 35px
+            input[type=submit]
+                width: 30%
+                height: 35px
+
+@include old-screen
+    .wrapper_form
+        padding: 80px 0 50px 0
+    .block_form
+        h2
+            font-size: 15px
+            line-height: 22px
+        form
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            input[type=text]
+                width: 48%
+                height: 35px
+            input[type=submit]
+                width: 30%
+                height: 35px

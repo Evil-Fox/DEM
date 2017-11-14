@@ -29,5 +29,8 @@
     "gulp.spritesmith": "^6.4.0",
     "imagemin-pngquant": "^5.0.0",
     "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "gulp-notify": "^3.0.0"
   }
 }

@@ -1,0 +1,88 @@
+.wrapper_footer
+    background: #EFEFEF
+    border-top: 1px solid $wh
+    padding: 30px 0 40px 0
+.footer
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+.footer_nav,.footer_nav_info
+    a
+        color: $text_color
+        font-size: $text_min
+        text-decoration: underline
+        line-height: 20px
+        &:hover
+            color: $main_color
+
+.social_network
+    display: flex
+    justify-content: space-between
+    align-items: center
+    a
+        display: block
+        width: 35px
+        height: 35px
+        position: relative
+        margin: 0 13px 0 13px
+        transition: 0.5s
+        &:hover
+            transform: scale(1.1)
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+        &.vk::after
+            @include sprite($vk)
+        &.in::after
+            @include sprite($in)
+
+.footer_add
+    li
+        line-height: 20px
+        color: $text_color
+        font-size: $text_min
+
+@include phone
+    .footer
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: flex-start
+    .footer_nav,.footer_nav_info
+        flex-basis: 50%
+        margin: 0 0 30px 0
+    .footer_logo
+        flex-basis: 100%
+        margin: 0 0 30px 0
+        img
+            margin: 0 auto
+            display: block
+    .social_network
+        flex-basis: 100%
+        justify-content: center
+        margin: 0 0 30px 0
+
+
+@include phone-tablet
+    .footer
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: flex-start
+    .footer_nav,.footer_nav_info
+        flex-basis: 50%
+        margin: 0 0 30px 0
+    .footer_logo
+        flex-basis: 100%
+        margin: 0 0 30px 0
+        img
+            margin: 0 auto
+            display: block
+    .social_network
+        flex-basis: 100%
+        justify-content: center
+        margin: 0 0 30px 0

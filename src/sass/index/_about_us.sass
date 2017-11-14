@@ -1,0 +1,130 @@
+.wrapper_about_us
+    background: $back_color
+
+.about_us
+    margin-top: 60px
+    margin-bottom: 0
+    flex-direction: column
+    padding-bottom: 60px
+    border-bottom: 1px solid #EAEAEA
+    h3
+        margin: 0 0 20px 0
+        color: $main_color
+        font-size: $text_medium
+        font-weight: 900
+        text-transform: uppercase
+    p
+        color: $text_color
+        font-size: $text_medium
+        margin: 12px 0 12px 0
+        line-height: 18px
+        &:last-child
+            margin: 12px 0 0 0
+
+.about_info
+    padding-top: 60px
+    padding-bottom: 40px
+    justify-content: space-between
+    flex-wrap: wrap
+    h4
+        font-size: $text_medium
+        color: $text_color
+        font-weight: bold
+        text-transform: uppercase
+        margin: 0 0 15px 0
+    span
+        font-size: $text_min
+        color: $text_color
+        line-height: 18px
+.about_info_element
+    width: 100%
+    max-width: 260px
+    flex-basis: 20%
+    padding: 0 0 0 40px
+    margin: 0 0 0 0
+    position: relative
+    box-sizing: content-box
+    &:last-child
+        margin: 0 0 0 0
+    &:first-child
+        margin: 0 0 0 0
+    &-clock::after
+        content: ''
+        position: absolute
+        top: -7px
+        left: 0
+        @include sprite($clock)
+    &-truck::after
+        content: ''
+        position: absolute
+        top: -7px
+        left: -30px
+        @include sprite($truck)
+    &-exchange::after
+        content: ''
+        position: absolute
+        top: -7px
+        left: 0
+        @include sprite($exchange)
+    &-group::after
+        content: ''
+        position: absolute
+        top: -7px
+        left: 0
+        @include sprite($group)
+
+@include phone
+    .about_info
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        h4
+            text-align: center
+        span
+            text-align: center
+            display: block
+    .about_info_element
+        flex-basis: 100%
+        padding: 0 0 0 0
+        margin: 35px 0 40px 0
+        &:last-child
+            margin: 35px 0 0 0
+        &:first-child
+            margin: 0 0 40px 0
+        &::after
+            left: 0
+            right: 0
+            top: -45px
+            margin: 0 auto
+
+@include phone-tablet
+    .about_info
+        flex-wrap: wrap
+    .about_info_element
+        flex-basis: 30%
+        margin: 15px 0 15px 0
+        &:last-child
+            margin: 15px 0 15px 0
+        &:first-child
+            margin: 15px 0 15px 0
+@include tablet
+    .about_info
+        flex-wrap: wrap
+    .about_info_element
+        flex-basis: 20%
+        margin: 15px 0 15px 0
+        &:last-child
+            margin: 15px 0 15px 0
+        &:first-child
+            margin: 15px 0 15px 0
+
+@include old-screen
+    .about_info
+        flex-wrap: wrap
+    .about_info_element
+        flex-basis: 20%
+        margin: 15px 0 15px 0
+        &:last-child
+            margin: 15px 0 15px 0
+        &:first-child
+            margin: 15px 0 15px 0
