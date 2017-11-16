@@ -1,0 +1,58 @@
+.block_full_description
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+.description_tabs
+    border: none
+.description_tabs_title
+    margin: 0 0 0 0
+    &:last-child
+        margin: 0 0 0 25px
+.description_tabs_title a
+    color: $text_color
+    margin: 0 0 0 0
+
+.description_tabs_panel
+    h3
+        color: $text_color
+        font-size: $text_title
+        font-weight: bold
+        margin: 25px 0 25px 0
+        letter-spacing: 1px
+    p
+        color: $text_color
+        font-size: $text_medium
+        line-height: 18px
+        margin: 10px 0
+    ul
+        color: $text_color
+        font-size: $text_medium
+        line-height: 18px
+        li
+            margin: 0 0 0 12px
+            position: relative
+            &::before
+                content: '-'
+                position: absolute
+                top: 1px
+                left: -10px
+
+@include phone
+    .block_full_description
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+    .description_tabs
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+    .description_tabs_title:last-child
+        margin: 15px 0 0 0
+    .description_tabs_panel
+        h3
+            text-align: center
+            line-height: 20px
+        ul
+            li
+                margin: 5px 0

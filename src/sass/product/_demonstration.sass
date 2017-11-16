@@ -1,0 +1,102 @@
+.block_demonstration_product
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: 50px
+    margin-bottom: 50px
+
+.product_preview
+    flex-basis: 30%
+    width: 100%
+    max-width: 358px
+    min-width: 200px
+.demonstration_description
+    flex-basis: 70%
+    padding: 0 25px 0 25px
+    box-sizing: border-box
+    position: relative
+.short_description
+    position: relative
+    h2
+        font-size: $text_big
+        color: $text_color
+        font-weight: bold
+        margin: 0 0 30px 0
+    p
+        font-size: $text_medium
+        color: $text_color
+        line-height: 18px
+        margin: 15px 0 15px 0
+    ul
+        color: $text_color
+        font-size: $text_medium
+        line-height: 18px
+        li
+            margin: 0 0 0 12px
+            position: relative
+            &::before
+                content: '-'
+                position: absolute
+                top: 1px
+                left: -10px
+
+.realization_product
+    position: absolute
+    right: 0
+    top: 0
+    span
+        font-size: $text_medium
+        color: $text_color
+        text-transform: uppercase
+        margin: 0 47px 0 0
+        &:last-child
+            margin: 0
+
+.element_purchase
+    width: 100%
+    margin: 38px 0 0 0
+    label
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    input[type=submit]
+        background: $red_color
+        border: none
+        color: $wh
+        width: 261px
+        height: 45px
+        cursor: pointer
+        transition: 0.2s
+        &:hover
+            box-shadow: 0px 2px 5px 1px #000
+            transform: scale(1.02)
+    span.price
+        margin: 0 0 0 45px
+        color: $red_color
+        font-size: $text_big
+        font-weight: bold
+        span
+            margin: 0 0 0 10px
+
+@include phone
+    .product_preview
+        flex-basis: 100%
+    .block_demonstration_product
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+    .demonstration_description
+        flex-basis: 100%
+        padding: 65px 0 0 0
+        width: 100%
+    .realization_product
+        line-height: 20px
+    .short_description h2
+        text-align: center
+
+@include phone-tablet
+    .product_preview
+        margin: 0 auto
+        flex-basis: 100%
+    .demonstration_description
+        padding: 50px 25px 0 25px

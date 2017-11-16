@@ -1,0 +1,55 @@
+.page_dem
+    color: $text_color
+    margin-bottom: 50px
+    h1
+        font-size: $text_big
+        margin: 15px 0 15px 0
+    h2
+        font-size: $text_title
+        margin: 15px 0 15px 0
+    h3
+        font-size: $text_medium
+        margin: 15px 0 15px 0
+    p
+        line-height: 18px
+        margin: 15px 0 15px 0
+    ul
+        margin: 15px 0 15px 0
+        li
+            margin: 10px 0 10px 12px
+            position: relative
+            &::before
+                content: '-'
+                position: absolute
+                top: 1px
+                left: -10px
+    a
+        color: $main_color
+        &:hover
+            text-decoration: underline
+
+.page_bold
+    font-weight: bold
+.page_color
+    color: $main_color
+.page_link
+    font-size: $text_medium
+    color: $main_color
+    margin: 10px 0 10px 0
+
+@include phone
+    .page
+        text-align: center
+        p
+            text-align: left
+        ul
+            li
+                text-align: left
+@include phone-tablet
+    .page
+        text-align: center
+        p
+            text-align: left
+        ul
+            li
+                text-align: left

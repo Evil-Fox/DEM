@@ -13,6 +13,7 @@
         font-size: 25px
         margin: 20px 0
         letter-spacing: 1px
+        text-align: center
     input[type=text]
         width: 50%
         color: $wh
@@ -32,6 +33,14 @@
         margin: 20px
         cursor: pointer
         text-transform: uppercase
+        &:hover
+            box-shadow: 0px 2px 5px 1px #000
+            transform: scale(1.02)
 .close-button
     color: $green_color
     font-size: 45px
+
+@include phone
+    .reveal
+        input[type=text]
+            width: 70%

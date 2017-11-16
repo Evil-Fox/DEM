@@ -8,28 +8,61 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites
+$arrow-aside-b-name: 'arrow_aside_b'
+$arrow-aside-b-x: 127px
+$arrow-aside-b-y: 90px
+$arrow-aside-b-offset-x: -127px
+$arrow-aside-b-offset-y: -90px
+$arrow-aside-b-width: 15px
+$arrow-aside-b-height: 8px
+$arrow-aside-b-total-width: 153px
+$arrow-aside-b-total-height: 110px
+$arrow-aside-b-image: '../img/sprite.png'
+$arrow-aside-b: (127px, 90px, -127px, -90px, 15px, 8px, 153px, 110px, '../img/sprite.png', 'arrow_aside_b', )
+$arrow-aside-t-name: 'arrow_aside_t'
+$arrow-aside-t-x: 127px
+$arrow-aside-t-y: 82px
+$arrow-aside-t-offset-x: -127px
+$arrow-aside-t-offset-y: -82px
+$arrow-aside-t-width: 15px
+$arrow-aside-t-height: 8px
+$arrow-aside-t-total-width: 153px
+$arrow-aside-t-total-height: 110px
+$arrow-aside-t-image: '../img/sprite.png'
+$arrow-aside-t: (127px, 82px, -127px, -82px, 15px, 8px, 153px, 110px, '../img/sprite.png', 'arrow_aside_t', )
+$arrow-filter-name: 'arrow_filter'
+$arrow-filter-x: 142px
+$arrow-filter-y: 82px
+$arrow-filter-offset-x: -142px
+$arrow-filter-offset-y: -82px
+$arrow-filter-width: 11px
+$arrow-filter-height: 6px
+$arrow-filter-total-width: 153px
+$arrow-filter-total-height: 110px
+$arrow-filter-image: '../img/sprite.png'
+$arrow-filter: (142px, 82px, -142px, -82px, 11px, 6px, 153px, 110px, '../img/sprite.png', 'arrow_filter', )
 $arrow-menu-name: 'arrow_menu'
 $arrow-menu-x: 127px
-$arrow-menu-y: 61px
+$arrow-menu-y: 98px
 $arrow-menu-offset-x: -127px
-$arrow-menu-offset-y: -61px
+$arrow-menu-offset-y: -98px
 $arrow-menu-width: 13px
 $arrow-menu-height: 8px
 $arrow-menu-total-width: 153px
 $arrow-menu-total-height: 110px
 $arrow-menu-image: '../img/sprite.png'
-$arrow-menu: (127px, 61px, -127px, -61px, 13px, 8px, 153px, 110px, '../img/sprite.png', 'arrow_menu', )
+$arrow-menu: (127px, 98px, -127px, -98px, 13px, 8px, 153px, 110px, '../img/sprite.png', 'arrow_menu', )
 $basket-name: 'basket'
 $basket-x: 127px
-$basket-y: 26px
+$basket-y: 47px
 $basket-offset-x: -127px
-$basket-offset-y: -26px
+$basket-offset-y: -47px
 $basket-width: 20px
 $basket-height: 17px
 $basket-total-width: 153px
 $basket-total-height: 110px
 $basket-image: '../img/sprite.png'
-$basket: (127px, 26px, -127px, -26px, 20px, 17px, 153px, 110px, '../img/sprite.png', 'basket', )
+$basket: (127px, 47px, -127px, -47px, 20px, 17px, 153px, 110px, '../img/sprite.png', 'basket', )
 $clock-name: 'clock'
 $clock-x: 127px
 $clock-y: 0px
@@ -41,6 +74,17 @@ $clock-total-width: 153px
 $clock-total-height: 110px
 $clock-image: '../img/sprite.png'
 $clock: (127px, 0px, -127px, 0px, 26px, 26px, 153px, 110px, '../img/sprite.png', 'clock', )
+$del-name: 'del'
+$del-x: 127px
+$del-y: 26px
+$del-offset-x: -127px
+$del-offset-y: -26px
+$del-width: 21px
+$del-height: 21px
+$del-total-width: 153px
+$del-total-height: 110px
+$del-image: '../img/sprite.png'
+$del: (127px, 26px, -127px, -26px, 21px, 21px, 153px, 110px, '../img/sprite.png', 'del', )
 $exchange-name: 'exchange'
 $exchange-x: 65px
 $exchange-y: 75px
@@ -87,15 +131,15 @@ $percent-image: '../img/sprite.png'
 $percent: (0px, 0px, 0px, 0px, 75px, 75px, 153px, 110px, '../img/sprite.png', 'percent', )
 $phone-name: 'phone'
 $phone-x: 127px
-$phone-y: 43px
+$phone-y: 64px
 $phone-offset-x: -127px
-$phone-offset-y: -43px
+$phone-offset-y: -64px
 $phone-width: 18px
 $phone-height: 18px
 $phone-total-width: 153px
 $phone-total-height: 110px
 $phone-image: '../img/sprite.png'
-$phone: (127px, 43px, -127px, -43px, 18px, 18px, 153px, 110px, '../img/sprite.png', 'phone', )
+$phone: (127px, 64px, -127px, -64px, 18px, 18px, 153px, 110px, '../img/sprite.png', 'phone', )
 $truck-name: 'truck'
 $truck-x: 75px
 $truck-y: 0px
@@ -121,7 +165,7 @@ $vk: (75px, 25px, -75px, -25px, 35px, 36px, 153px, 110px, '../img/sprite.png', '
 $spritesheet-width: 153px
 $spritesheet-height: 110px
 $spritesheet-image: '../img/sprite.png'
-$spritesheet-sprites: ($arrow-menu, $basket, $clock, $exchange, $group, $in, $percent, $phone, $truck, $vk, )
+$spritesheet-sprites: ($arrow-aside-b, $arrow-aside-t, $arrow-filter, $arrow-menu, $basket, $clock, $del, $exchange, $group, $in, $percent, $phone, $truck, $vk, )
 $spritesheet: (153px, 110px, '../img/sprite.png', $spritesheet-sprites, )
 
 // The provided mixins are intended to be used with the array-like variables

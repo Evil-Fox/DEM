@@ -1,0 +1,58 @@
+.full_value_container
+    width: 19.5982905982906%
+    h3
+        font-size: $text_medium
+        color: #3B3B3B
+        font-weight: bold
+        margin: 0 0 13px 0
+        padding: 0 0 12px 0
+        border-bottom: 1px solid $back_color
+    input[type=submit]
+        @include main_button
+        cursor: pointer
+        border: none
+        width: 161px
+        height: 30px
+        font-size: $text_min
+.price_element
+    font-size: $text_medium
+    color: #3B3B3B
+    margin: 0 0 20px 0
+.button_next
+    width: 161px
+    padding: 12px 0
+    margin: 10px 0 0 0
+    text-align: center
+    color: $text_color
+    background: $back_color
+    display: table
+    font-size: $text_min
+
+@include phone
+    .full_value_container
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 20px 0 0 0
+@include phone-tablet
+    .full_value_container
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 20px 0 0 0
+@include tablet
+    .full_value_container
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 20px 0 0 0
+@include old-screen
+    .full_value_container
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 20px 0 0 0

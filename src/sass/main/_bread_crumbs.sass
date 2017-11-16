@@ -1,0 +1,28 @@
+.block_bread_crumbs
+    margin-bottom: 25px
+.container_bread_crumbs
+    width: 100%
+    background: #F5F5F5
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+    padding: 17px 0 15px 18px
+    li
+        position: relative
+        margin: 0 22px 0 0
+        &::before
+            content: '/'
+            position: absolute
+            top: 2px
+            right: -15px
+        &:last-child::before
+            content: ''
+            display: none
+        a
+            font-size: $text_min
+            color: $text_color
+            text-decoration: underline
+            &.bread_crumbs_active
+                color: $main_color
+                text-decoration: none
