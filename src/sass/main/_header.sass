@@ -11,7 +11,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    width: 29.19831223628692%
+    width: 36.19831223628692%
 .bell_element
     display: flex
     flex-direction: column
@@ -29,7 +29,7 @@
 .block_submenu
     display: flex
 .submenu_element
-    margin: 0 11px
+    margin: 0 9px
     a
         font-size: $text_min
         text-decoration: none
@@ -82,6 +82,10 @@
 
 
 @include phone
+    .bell_element
+        text-align: left
+    .bell_element a,.submenu_element a,.bell_element span
+        font-size: 12px
     .header
         justify-content: space-between
         align-items: flex-start
@@ -113,10 +117,11 @@
     .header_button
         display: block
         width: 164px
-        padding-left: 0
+        padding-left: 19px
         padding-right: 0
         padding-top: 10px
         padding-bottom: 10px
+        font-size: 12px
 
     .header_button_phone
         &::before

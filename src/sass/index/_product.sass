@@ -24,14 +24,19 @@
 
 .product_title
     @include main_title
-
+.block_container_product
+    display: flex
+    justify-content: left
+    align-items: flex-start
+    flex-wrap: wrap
 .link_product
     display: block
-    border-bottom: 5px solid $main_color
+    border-bottom: 5px solid $back_color
     transition: 0.9s
     color: $text_color
     font-size: $text_medium
     box-sizing: border-box
+    margin: auto
     &:hover
         border-bottom: 5px solid $green_color
 
@@ -39,11 +44,7 @@
     padding: 25px 0 55px 0
     width: 100%
 
-.block_container_product
-    display: flex
-    justify-content: space-between
-    align-items: flex-start
-    flex-wrap: wrap
+
 
 .tabs-content
     width: 100%

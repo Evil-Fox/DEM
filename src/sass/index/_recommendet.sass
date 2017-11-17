@@ -11,6 +11,7 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+
 .element_link
     font-size: $text_medium
     color: $main_color
@@ -27,12 +28,13 @@
     text-align: center
     flex-basis: 27%
     margin: 40px 0 0 0
+
     p
         font-size: $text_min
         color: $text_color
         text-align: center
         margin: 20px 0 20px 0
-        line-height: 18px
+        line-height: 24px
 
 .recommendet_link
     img
@@ -75,12 +77,14 @@
 
 @include tablet
     .recommendet_content
-        justify-content: space-between
+        justify-content: space-around
     .recommendet_element
         flex-basis: 30%
 
 @include old-screen
-    .recommendet_content
-        justify-content: space-between
     .recommendet_element
-        flex-basis: 30%
+        justify-content: space-around
+        max-width: 420px
+        flex-basis: 22%
+    .link_product
+        flex-basis: 45%

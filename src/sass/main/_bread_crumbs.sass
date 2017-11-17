@@ -26,3 +26,17 @@
             &.bread_crumbs_active
                 color: $main_color
                 text-decoration: none
+
+@include phone
+    .container_bread_crumbs
+        padding: 17px 0 15px 10px
+    .container_bread_crumbs
+        li
+            a
+                font-size: 11px
+    .container_bread_crumbs li::before
+        right: -10px
+    .container_bread_crumbs li
+        margin: 0 14px 0 0
+        &:last-child
+            margin: 0 0 0 0 !important

@@ -20,7 +20,7 @@
     a
         color: $main_color
         text-transform: uppercase
-        font-size: $text_medium
+        font-size: $text_min
         text-decoration: none
 
 .vertical
@@ -28,7 +28,7 @@
     right: 0!important
     margin:  0 auto
     li
-        padding: 10px 15px
+        padding: 10px 0
         &:hover
             background: $back_color
         a
@@ -56,7 +56,10 @@
             margin: 0 auto
             display: block
 
+
 @include tablet
+    .menu.vertical
+        justify-content: center
     .nav
         justify-content: center
     .main_logo
@@ -73,6 +76,14 @@
             margin: 0 0 0 0
 
 @include phone-tablet
+    .vertical li a
+        padding: 5px 0 0 5px
+    .sub_li
+        padding: 0 0 0 0 !important
+    .nav_element a
+        font-size: 12px
+    .vertical li a
+        padding: 0 35px 0 0
     .menu
         justify-content: center
     .nav
@@ -90,6 +101,12 @@
             margin: 0 0 0 0
 
 @include phone
+    .vertical li a
+        padding: 5px 0 0 5px
+    .sub_li
+        padding: 0 0 0 0 !important
+    .nav_element a
+        font-size: 12px
     .menu
         width: 100% !important
     .nav
