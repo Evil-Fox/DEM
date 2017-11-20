@@ -27,11 +27,20 @@ p
   align-items: flex-start
 
 .frame
-  width: 86.74963396778917%
-  margin: 0 auto
-  padding: 0 15px
-  display: flex
-
+    width: 86.74963396778917%
+    margin: 0 auto
+    padding: 0 15px
+    display: flex
+    @include old-screen
+        font-size: 90%
+        width: 100%
+        box-sizing: border-box
+        padding:  0 1.28205128205128%
+    @include tablet
+        font-size: 90%
+        width: 100%
+        box-sizing: border-box
+        padding:  0 1.28205128205128%
 
 // media
 @media screen and (min-width:1367px )
